@@ -31,10 +31,10 @@ const deleteId = async (req, res) => {
     const userId = req.params.id
     const deleteUser = await userSchema.findByIdAndDelete(userId) 
 
-    res.status(200).json ([
+    res.status(200).json ({
       "message": "User deletado com sucesso",
       "usuário": deleteUser
-    ])
+  })
 
 
   }catch(error){
